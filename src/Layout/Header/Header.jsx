@@ -3,7 +3,9 @@ import logo from '../../assets/images/logo.svg';
 import cartIcon from '../../assets/images/icon-cart.svg';
 import menuIcon from '../../assets/images/icon-menu.svg';
 import closeIcon from '../../assets/images/icon-close.svg';
+import avatar from '../../assets/images/image-avatar.png';
 import style from './Header.module.css';
+import Cart from '../../component/cart/Cart';
 
 function Header() {
 	return (
@@ -17,6 +19,10 @@ function Header() {
 			<button type="submit">
 				<img src={cartIcon} alt="Shopping Cart Button" />
 			</button>
+			{/* <button type="submit">
+				<img src={avatar} alt="Shopping Cart Button" />
+			</button> */}
+			<Cart />
 		</header>
 	);
 }

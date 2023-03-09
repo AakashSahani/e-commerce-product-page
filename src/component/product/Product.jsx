@@ -12,17 +12,17 @@ function Product() {
 		<div className={style.product}>
 			<img src={productOne} alt="a pair of shoes on display" />
 			<div className={style.product_text}>
-				<div className="company">SNEAKER COMPANY</div>
+				<p>SNEAKER COMPANY</p>
 				<h3>Fall Limited Edition Sneakers</h3>
 				<p>
 					These low-profile sneakers are your perfect casual wear companion.
 					Featuring a durable rubber outer sole, they'll withstand everything
 					the weather can offer.
 				</p>
-				<div>
+				<div className={style.product_pricing}>
 					<span>$125.00</span>
 					<span>50%</span>
-					<span>$250.00</span>
+					<s>$250.00</s>
 				</div>
 				<form>
 					<button
@@ -33,10 +33,16 @@ function Product() {
 					>
 						-
 					</button>
-					<label htmlFor="quantity" hidden>
+					<label htmlFor="quantity" hidden aria-hidden>
 						Product Quantity
 					</label>
-					<input type="number" name="quantity" value={quantity} id="quantity" />
+					<input
+						type="number"
+						name="quantity"
+						value={quantity}
+						readOnly
+						id="quantity"
+					/>
 					<button
 						type="button"
 						onClick={() => {
@@ -46,7 +52,9 @@ function Product() {
 						+
 					</button>
 				</form>
-				<button type="submit">Add to cart</button>
+				<button type="submit" className={style.cart_button}>
+					Add to cart
+				</button>
 			</div>
 		</div>
 	);

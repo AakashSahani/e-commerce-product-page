@@ -1,0 +1,27 @@
+.cart {
+	position: fixed;
+	display: flex;
+	flex-flow: column;
+	background-color: white;
+	width: 95%;
+	margin: auto;
+	top: 10rem;
+	gap: 1rem;
+}
+
+.cart > * {
+	padding: 1rem;
+}
+
+.cart h4 {
+	border-bottom: 1px solid rgb(173, 170, 170);
+}
+
+.cart_item {
+	display: flex;
+	flex-flow: row;
+}
+
+.cart_item > img {
+	width: 3rem;
+}
