@@ -3,6 +3,9 @@ import { v4 as uuidv4 } from 'uuid';
 import PropTypes from 'prop-types';
 import style from './Product.module.css';
 import productOne from '../../assets/images/image-product-1.jpg';
+import productTwo from '../../assets/images/image-product-2.jpg';
+import productThree from '../../assets/images/image-product-3.jpg';
+import productFour from '../../assets/images/image-product-4.jpg';
 
 function Product({ cartList, setCartList }) {
 	const [quantity, setQuantity] = useState(0);
@@ -26,7 +29,23 @@ function Product({ cartList, setCartList }) {
 
 	return (
 		<div className={style.product}>
-			<img src={productOne} alt="a pair of shoes on display" />
+			<div className={style.product_image}>
+				<img src={productOne} alt="a pair of shoes on display" />
+				<ul className={style.product_image_list}>
+					<li>
+						<img src={productOne} alt="a pair of shoes" />
+					</li>
+					<li>
+						<img src={productTwo} alt="a pair of shoes" />
+					</li>
+					<li>
+						<img src={productThree} alt="a pair of shoes" />
+					</li>
+					<li>
+						<img src={productFour} alt="a pair of shoes" />
+					</li>
+				</ul>
+			</div>
 			<div className={style.product_text}>
 				<p>SNEAKER COMPANY</p>
 				<h3>Fall Limited Edition Sneakers</h3>
@@ -40,45 +59,47 @@ function Product({ cartList, setCartList }) {
 					<span>50%</span>
 					<s>$250.00</s>
 				</div>
-				<form>
+				<div className={style.form_container}>
+					<form>
+						<button
+							type="button"
+							onClick={() => {
+								setQuantity((quantity) => (quantity === 0 ? 0 : quantity - 1));
+							}}
+						>
+							-
+						</button>
+						<label htmlFor="quantity" hidden aria-hidden>
+							Product Quantity
+						</label>
+						<input
+							type="number"
+							name="quantity"
+							id="quantity"
+							value={quantity}
+							className={style.without_number}
+							min={0}
+							onChange={(e) => {
+								setQuantity(parseInt(e.currentTarget.value));
+							}}
+						/>
+						<button
+							type="button"
+							onClick={() => {
+								setQuantity((quantity) => quantity + 1);
+							}}
+						>
+							+
+						</button>
+					</form>
 					<button
-						type="button"
-						onClick={() => {
-							setQuantity((quantity) => (quantity === 0 ? 0 : quantity - 1));
-						}}
+						type="submit"
+						className={style.cart_button}
+						onClick={handleSubmit}
 					>
-						-
+						Add to cart
 					</button>
-					<label htmlFor="quantity" hidden aria-hidden>
-						Product Quantity
-					</label>
-					<input
-						type="number"
-						name="quantity"
-						id="quantity"
-						value={quantity}
-						className={style.without_number}
-						min={0}
-						onChange={(e) => {
-							setQuantity(parseInt(e.currentTarget.value));
-						}}
-					/>
-					<button
-						type="button"
-						onClick={() => {
-							setQuantity((quantity) => quantity + 1);
-						}}
-					>
-						+
-					</button>
-				</form>
-				<button
-					type="submit"
-					className={style.cart_button}
-					onClick={handleSubmit}
-				>
-					Add to cart
-				</button>
+				</div>
 			</div>
 		</div>
 	);

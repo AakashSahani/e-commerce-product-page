@@ -5,6 +5,11 @@
 	height: 100vh;
 }
 
+.product_image ul {
+	display: none;
+	list-style: none;
+}
+
 img {
 	width: 100%;
 	height: auto;
@@ -78,6 +83,8 @@ form {
 	flex-flow: row;
 	justify-content: space-between;
 	border-radius: 0.75rem;
+	width: 100%;
+	margin: 1rem 0;
 }
 
 form input {
@@ -95,5 +102,45 @@ form button {
 @media (min-width: 700px) {
 	.product {
 		flex-flow: row;
+		margin: auto;
+		justify-content: center;
+		align-items: center;
+		gap: 2rem;
+		padding: 0 10%;
+	}
+	.product_image {
+		flex: 1;
+	}
+	.product_image img {
+		border-radius: 1rem;
+	}
+	.product_image ul {
+		display: flex;
+		flex-flow: row;
+		margin: 1rem auto;
+		justify-content: space-between;
+	}
+
+	.product_image ul li {
+		width: 6rem;
+	}
+
+	.product_text {
+		flex: 1;
+	}
+	.form_container {
+		display: flex;
+		align-items: center;
+		gap: 1rem;
+	}
+	.form_container form {
+		display: flex;
+		flex-flow: row;
+		justify-content: center;
+		min-width: fit-content;
+	}
+	.cart_button {
+		height: fit-content;
+		min-width: fit-content;
 	}
 }

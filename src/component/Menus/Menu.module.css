@@ -31,5 +31,20 @@ nav {
 @media (min-width: 700px) {
 	nav {
 		position: relative;
+		display: flex;
+		width: fit-content;
+		height: fit-content;
+		padding: 0 2rem;
+		flex: 1;
+	}
+	.menu_mobile {
+		display: flex;
+		flex-flow: row;
+		justify-content: center;
+		align-items: center;
+		height: inherit;
+		width: inherit;
+		margin: 0;
+		gap: 2rem;
 	}
 }

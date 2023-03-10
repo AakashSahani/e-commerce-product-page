@@ -4,7 +4,6 @@ import { useState } from 'react';
 import logo from '../../assets/images/logo.svg';
 import cartIcon from '../../assets/images/icon-cart.svg';
 import iconMenu from '../../assets/images/icon-menu.svg';
-// import closeIcon from '../../assets/images/icon-close.svg';
 import avatar from '../../assets/images/image-avatar.png';
 import style from './Header.module.css';
 import Cart from '../../component/Carts/Cart';
@@ -29,10 +28,14 @@ function Header({ cartList, setCartList }) {
 					<img src={logo} alt="Sneakers" />
 				</a>
 				{menu && <Menu />}
+				<div className={style.desktop}>
+					<Menu />
+				</div>
 			</div>
 			<div className={style.container}>
 				<button type="submit" onClick={() => setActive((active) => !active)}>
 					<img src={cartIcon} alt="Shopping Cart Button" />
+					{/* <span className={style.item_num}>1</span> */}
 				</button>
 				<button type="submit" className={style.profile}>
 					<img src={avatar} alt="User Profile" />
