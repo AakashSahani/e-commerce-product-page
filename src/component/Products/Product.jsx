@@ -2,10 +2,10 @@ import React, { useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import PropTypes from 'prop-types';
 import style from './Product.module.css';
-import productOne from '../../assets/images/image-product-1.jpg';
-import productTwo from '../../assets/images/image-product-2.jpg';
-import productThree from '../../assets/images/image-product-3.jpg';
-import productFour from '../../assets/images/image-product-4.jpg';
+import productOne from '../../assets/images/image-product-1.webp';
+import productTwo from '../../assets/images/image-product-2.webp';
+import productThree from '../../assets/images/image-product-3.webp';
+import productFour from '../../assets/images/image-product-4.webp';
 
 function Product({ cartList, setCartList }) {
 	const [quantity, setQuantity] = useState(0);
@@ -15,7 +15,7 @@ function Product({ cartList, setCartList }) {
 			name: 'Fall Limited Edition Sneakers',
 			price: 125,
 			quantity: quantity,
-			productImgUrl: '../../assets/images/image-product-1-thumbnail.jpg',
+			productImgUrl: '../../assets/images/image-product-1-thumbnail.webp',
 		};
 		const index = cartList.findIndex((cart) => cart.name === product1.name);
 		const newList = [...cartList];
@@ -69,13 +69,12 @@ function Product({ cartList, setCartList }) {
 						>
 							-
 						</button>
-						<label htmlFor="quantity" hidden aria-hidden>
-							Product Quantity
-						</label>
 						<input
 							type="number"
+							aria-label="Product Quantity"
 							name="quantity"
 							id="quantity"
+							title="Product Quantity"
 							value={quantity}
 							className={style.without_number}
 							min={0}

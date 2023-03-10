@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-// import productOneThumbnail from '../../assets/images/image-product-1-thumbnail.jpg';
+// import productOneThumbnail from '../../assets/images/image-product-1-thumbnail.webp';
 // import iconDelete from '../../assets/images/icon-delete.svg';
 import style from './Cart.module.css';
 import CartItem from '../../Layout/CartItems/CartItem';
