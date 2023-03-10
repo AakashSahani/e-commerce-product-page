@@ -49,6 +49,7 @@ input {
 	background-color: orangered;
 	padding: 1rem 0;
 	color: white;
+	border-radius: 0.75rem;
 }
 
 s::before,
@@ -67,4 +68,25 @@ s::before {
 
 s::after {
 	content: 'Price has been reduced';
+}
+
+form {
+	background-color: lightgray;
+	padding: 1rem;
+	display: flex;
+	flex-flow: row;
+	justify-content: space-between;
+	border-radius: 0.75rem;
+}
+
+form input {
+	background-color: transparent;
+	color: black;
+	appearance: none;
+}
+
+form button {
+	font-size: 1.2rem;
+	color: orangered;
+	font-weight: 600;
 }

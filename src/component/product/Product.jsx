@@ -1,12 +1,25 @@
 import React, { useState } from 'react';
+import { v4 as uuidv4 } from 'uuid';
+import PropTypes from 'prop-types';
 import style from './Product.module.css';
 import productOne from '../../assets/images/image-product-1.jpg';
-import productTwo from '../../assets/images/image-product-2.jpg';
-import productThree from '../../assets/images/image-product-1.jpg';
-import productFour from '../../assets/images/image-product-1.jpg';
+// import productTwo from '../../assets/images/image-product-2.jpg';
+// import productThree from '../../assets/images/image-product-1.jpg';
+// import productFour from '../../assets/images/image-product-1.jpg';
 
-function Product() {
+function Product({ cartList, setCartList }) {
 	const [quantity, setQuantity] = useState(0);
+	const handleSubmit = () => {
+		const product1 = {
+			id: uuidv4(),
+			name: 'Fall Limited Edition Sneakers',
+			price: 125,
+			quantity: quantity,
+			productImgUrl: '../../assets/images/image-product-1-thumbnail.jpg',
+		};
+		setCartList((cartList) => [...cartList, product1]);
+		console.log(cartList);
+	};
 
 	return (
 		<div className={style.product}>
@@ -16,8 +29,8 @@ function Product() {
 				<h3>Fall Limited Edition Sneakers</h3>
 				<p>
 					These low-profile sneakers are your perfect casual wear companion.
-					Featuring a durable rubber outer sole, they'll withstand everything
-					the weather can offer.
+					Featuring a durable rubber outer sole, they&apos;ll withstand
+					everything the weather can offer.
 				</p>
 				<div className={style.product_pricing}>
 					<span>$125.00</span>
@@ -39,9 +52,13 @@ function Product() {
 					<input
 						type="number"
 						name="quantity"
-						value={quantity}
-						readOnly
 						id="quantity"
+						value={quantity}
+						className={style.without_number}
+						min={0}
+						onChange={(e) => {
+							setQuantity(parseInt(e.currentTarget.value));
+						}}
 					/>
 					<button
 						type="button"
@@ -52,12 +69,21 @@ function Product() {
 						+
 					</button>
 				</form>
-				<button type="submit" className={style.cart_button}>
+				<button
+					type="submit"
+					className={style.cart_button}
+					onClick={handleSubmit}
+				>
 					Add to cart
 				</button>
 			</div>
 		</div>
 	);
 }
+
+Product.propTypes = {
+	cartList: PropTypes.array,
+	setCartList: PropTypes.func,
+};
 
 export default Product;

@@ -1,16 +1,17 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { useState } from 'react';
 import logo from '../../assets/images/logo.svg';
 import cartIcon from '../../assets/images/icon-cart.svg';
 import iconMenu from '../../assets/images/icon-menu.svg';
-import closeIcon from '../../assets/images/icon-close.svg';
+// import closeIcon from '../../assets/images/icon-close.svg';
 import avatar from '../../assets/images/image-avatar.png';
 import style from './Header.module.css';
 import Cart from '../../component/Cart/Cart';
 import Menu from '../../component/Menu/Menu';
 import iconClose from '../../assets/images/icon-close.svg';
 
-function Header() {
+function Header({ cartList, setCartList }) {
 	const [active, setActive] = useState(false);
 	const [menu, setMenu] = useState(false);
 
@@ -36,10 +37,15 @@ function Header() {
 				<button type="submit" className={style.profile}>
 					<img src={avatar} alt="User Profile" />
 				</button>
-				{active && <Cart />}
+				{active && <Cart cartList={cartList} setCartList={setCartList} />}
 			</div>
 		</header>
 	);
 }
+
+Header.propTypes = {
+	cartList: PropTypes.array,
+	setCartList: PropTypes.func,
+};
 
 export default Header;

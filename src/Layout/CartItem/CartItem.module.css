@@ -1,0 +1,18 @@
+.cart_item {
+	display: flex;
+	flex-flow: row;
+	gap: 0.5rem;
+	height: fit-content;
+}
+
+.cart_item > img {
+	width: 3rem;
+	border-radius: 0.25rem;
+}
+
+.cart_item > button {
+	border: none;
+	padding: 0;
+	background-color: transparent;
+	margin: auto;
+}

@@ -1,5 +1,4 @@
 import React from 'react';
-import iconClose from '../../assets/images/icon-close.svg';
 import style from './Menu.module.css';
 
 function Menu() {
