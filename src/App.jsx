@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import { useState } from 'react';
 import Product from './component/Products/Product';
-import Header from './Layout/Header/Header';
+import Header from './Layout/Headers/Header';
 
 function App() {
 	// const [productList, setProductList] = useState(Products);
