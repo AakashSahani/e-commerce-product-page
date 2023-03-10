@@ -11,7 +11,7 @@ function Cart({ cartList, setCartList }) {
 			<h4>Cart</h4>
 			<ul className={style.cart_item_list}>
 				{cartList.length === 0 ? (
-					<li>No Items in Cart</li>
+					<li className={style.empty}>Your cart is empty.</li>
 				) : (
 					cartList.map((cartItem) => (
 						<CartItem

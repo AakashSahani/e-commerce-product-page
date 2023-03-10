@@ -3,9 +3,6 @@ import { v4 as uuidv4 } from 'uuid';
 import PropTypes from 'prop-types';
 import style from './Product.module.css';
 import productOne from '../../assets/images/image-product-1.jpg';
-// import productTwo from '../../assets/images/image-product-2.jpg';
-// import productThree from '../../assets/images/image-product-1.jpg';
-// import productFour from '../../assets/images/image-product-1.jpg';
 
 function Product({ cartList, setCartList }) {
 	const [quantity, setQuantity] = useState(0);
@@ -17,8 +14,14 @@ function Product({ cartList, setCartList }) {
 			quantity: quantity,
 			productImgUrl: '../../assets/images/image-product-1-thumbnail.jpg',
 		};
-		setCartList((cartList) => [...cartList, product1]);
-		console.log(cartList);
+		const index = cartList.findIndex((cart) => cart.name === product1.name);
+		const newList = [...cartList];
+		if (index > -1) {
+			newList[index] = product1;
+			setCartList((cartList) => newList);
+		} else {
+			setCartList((cartList) => [...cartList, product1]);
+		}
 	};
 
 	return (
