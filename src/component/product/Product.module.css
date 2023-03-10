@@ -91,3 +91,9 @@ form button {
 	color: orangered;
 	font-weight: 600;
 }
+
+@media (min-width: 700px) {
+	.product {
+		flex-flow: row;
+	}
+}

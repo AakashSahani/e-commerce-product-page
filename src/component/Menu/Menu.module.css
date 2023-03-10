@@ -27,3 +27,9 @@ nav {
 	color: black;
 	font-weight: 600;
 }
+
+@media (min-width: 700px) {
+	nav {
+		position: relative;
+	}
+}

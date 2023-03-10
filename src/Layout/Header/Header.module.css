@@ -21,3 +21,9 @@ header {
 .menu_button {
 	z-index: 60;
 }
+
+@media (min-width: 700px) {
+	.menu_button {
+		display: none;
+	}
+}

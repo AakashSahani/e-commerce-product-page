@@ -11,7 +11,9 @@ function App() {
 	return (
 		<>
 			<Header cartList={cartList} setCartList={setCartList} />
-			<Product cartList={cartList} setCartList={setCartList} />
+			<section>
+				<Product cartList={cartList} setCartList={setCartList} />
+			</section>
 		</>
 	);
 }
