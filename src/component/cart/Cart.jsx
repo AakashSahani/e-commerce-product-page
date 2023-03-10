@@ -7,7 +7,7 @@ function Cart() {
 	return (
 		<div className={style.cart}>
 			<h4>Cart</h4>
-			<ul className={style.cart_items_list}>
+			<ul className={style.cart_item_list}>
 				<li className={style.cart_item}>
 					<img src={productOneThumbnail} alt="Sneaker shoes" />
 					<div>

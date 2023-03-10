@@ -4,5 +4,20 @@ header {
 	align-items: center;
 	flex-flow: row;
 	width: 100vw;
-	padding: 0.75rem 0.25rem;
+	padding: 0.75rem 1.5rem;
+	z-index: 0;
+}
+
+.container {
+	display: flex;
+	gap: 0.5rem;
+	z-index: inherit;
+}
+
+.profile {
+	width: 2rem;
+}
+
+.menu_button {
+	z-index: 60;
 }

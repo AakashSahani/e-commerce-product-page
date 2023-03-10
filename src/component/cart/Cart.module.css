@@ -1,27 +1,44 @@
 .cart {
-	position: fixed;
 	display: flex;
 	flex-flow: column;
+	position: fixed;
+	top: 10%;
+	right: 5%;
+	left: 5%;
 	background-color: white;
-	width: 95%;
-	margin: auto;
-	top: 10rem;
-	gap: 1rem;
+	color: black;
+	border-radius: 0.5rem;
 }
 
 .cart > * {
-	padding: 1rem;
+	padding: 1.5rem;
 }
 
 .cart h4 {
 	border-bottom: 1px solid rgb(173, 170, 170);
 }
 
+.cart_item_list {
+	display: flex;
+	flex-flow: column;
+	gap: 1rem;
+}
+
 .cart_item {
 	display: flex;
 	flex-flow: row;
+	gap: 0.5rem;
+	height: fit-content;
 }
 
 .cart_item > img {
 	width: 3rem;
+	border-radius: 0.25rem;
+}
+
+.cart_item > button {
+	border: none;
+	padding: 0;
+	background-color: transparent;
+	margin: auto;
 }
