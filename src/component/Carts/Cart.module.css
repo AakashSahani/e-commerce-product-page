@@ -9,6 +9,7 @@
 	color: black;
 	border-radius: 0.5rem;
 	min-height: 250px;
+	box-shadow: 0 0 20px 0px gray;
 }
 
 .cart > * {
@@ -44,13 +45,24 @@
 	border-radius: 0.75rem;
 }
 
-@media (min-width: 500px) {
+@media (min-width: 400px) {
 	.cart {
-		width: 350px;
+		width: 375px;
+	}
+}
+
+@media (min-width: 501px) and (max-width: 1079px) {
+	.cart {
+		top: 10%;
+		right: 5%;
 		left: auto;
+	}
+}
+
+@media (min-width: 1080px) {
+	.cart {
 		right: auto;
+		left: auto;
 		transform: translateX(-50%);
-		top: 5rem;
-		box-shadow: 0 0 20px 0px gray;
 	}
 }

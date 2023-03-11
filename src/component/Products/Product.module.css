@@ -137,13 +137,10 @@ form button {
 	color: gray;
 }
 
-/* @media (min-width: 885px) and (max-width: 1075px) {
-	.product {
-		padding: 0;
-	}
-} */
+@media (min-width: 700px) {
+}
 
-@media (min-width: 1075px) {
+@media (min-width: 925px) {
 	.product {
 		flex-flow: row;
 		width: 100%;
@@ -171,7 +168,6 @@ form button {
 	.product_image ul li {
 		width: 5rem;
 	}
-
 	.product_text {
 		flex: 1;
 	}
