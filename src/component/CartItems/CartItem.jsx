@@ -28,13 +28,7 @@ function CartItem({ cartItem, setCartList, cartList }) {
 }
 
 CartItem.propTypes = {
-	cartItem: PropTypes.objectOf(
-		PropTypes.string,
-		PropTypes.string,
-		PropTypes.number,
-		PropTypes.string,
-		PropTypes.number
-	),
+	cartItem: PropTypes.object,
 	cartList: PropTypes.array,
 	setCartList: PropTypes.func,
 };
