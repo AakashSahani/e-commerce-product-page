@@ -126,10 +126,6 @@ img {
 		object-fit: contain;
 		width: 100%;
 		height: auto;
-		border-radius: 0.75rem;
-	}
-	img {
-		border-radius: 1rem;
 		object-fit: contain;
 	}
 	.image_list {
