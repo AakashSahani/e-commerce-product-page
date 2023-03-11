@@ -28,7 +28,7 @@ nav {
 	font-weight: 600;
 }
 
-@media (min-width: 700px) {
+@media (min-width: 885px) {
 	nav {
 		position: relative;
 		display: flex;

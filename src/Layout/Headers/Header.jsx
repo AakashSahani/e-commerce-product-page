@@ -35,12 +35,18 @@ function Header({ cartList, setCartList }) {
 			<div className={style.container}>
 				<button type="submit" onClick={() => setActive((active) => !active)}>
 					<img src={cartIcon} alt="Shopping Cart Button" />
-					{/* <span className={style.item_num}>1</span> */}
 				</button>
 				<button type="submit" className={style.profile}>
 					<img src={avatar} alt="User Profile" />
 				</button>
-				{active && <Cart cartList={cartList} setCartList={setCartList} />}
+				{active && (
+					<Cart
+						cartList={cartList}
+						setCartList={setCartList}
+						active={active}
+						setActive={setActive}
+					/>
+				)}
 			</div>
 		</header>
 	);

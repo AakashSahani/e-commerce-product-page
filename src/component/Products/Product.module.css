@@ -137,10 +137,15 @@ form button {
 	color: gray;
 }
 
-@media (min-width: 700px) {
+/* @media (min-width: 885px) and (max-width: 1075px) {
+	.product {
+		padding: 0;
+	}
+} */
+
+@media (min-width: 1075px) {
 	.product {
 		flex-flow: row;
-		/* margin: auto; */
 		width: 100%;
 		min-width: fit-content;
 		justify-content: center;

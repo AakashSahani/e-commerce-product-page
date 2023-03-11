@@ -34,7 +34,7 @@ header {
 	display: none;
 }
 
-@media (min-width: 700px) {
+@media (min-width: 885px) {
 	header {
 		padding: 2rem 0;
 		border-bottom: 1px solid lightgray;
@@ -45,5 +45,8 @@ header {
 	}
 	.desktop {
 		display: block;
+	}
+	.container {
+		gap: 2rem;
 	}
 }

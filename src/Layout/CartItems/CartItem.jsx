@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import style from './CartItem.module.css';
-// import productOneThumbnail from '../../assets/images/image-product-1-thumbnail.webp';
 import iconDelete from '../../assets/images/icon-delete.svg';
 
 function CartItem({ cartItem, setCartList, cartList }) {
@@ -11,6 +10,7 @@ function CartItem({ cartItem, setCartList, cartList }) {
 		console.log(newCartList);
 		setCartList(newCartList);
 	};
+
 	return (
 		<li className={style.cart_item}>
 			<img src={`${cartItem.productImgUrl}`} alt="Sneaker shoes" />

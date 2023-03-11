@@ -6,16 +6,21 @@ import productOne from '../../assets/images/image-product-1.webp';
 import productTwo from '../../assets/images/image-product-2.webp';
 import productThree from '../../assets/images/image-product-3.webp';
 import productFour from '../../assets/images/image-product-4.webp';
+import productOneThumbnail from '../../assets/images/image-product-1-thumbnail.webp';
+import productTwoThumbnail from '../../assets/images/image-product-2-thumbnail.webp';
+import productThreeThumbnail from '../../assets/images/image-product-3-thumbnail.webp';
+import productFourThumbnail from '../../assets/images/image-product-4-thumbnail.webp';
 
 function Product({ cartList, setCartList }) {
 	const [quantity, setQuantity] = useState(0);
+	const [productMain, setProductMain] = useState(productOne);
 	const handleSubmit = () => {
 		const product1 = {
 			id: uuidv4(),
 			name: 'Fall Limited Edition Sneakers',
 			price: 125,
 			quantity: quantity,
-			productImgUrl: '../../assets/images/image-product-1-thumbnail.webp',
+			productImgUrl: '/src/assets/images/image-product-1-thumbnail.webp',
 		};
 		const index = cartList.findIndex((cart) => cart.name === product1.name);
 		const newList = [...cartList];
@@ -26,23 +31,41 @@ function Product({ cartList, setCartList }) {
 			setCartList((cartList) => [...cartList, product1]);
 		}
 	};
-
+	const switchImage = (key) => {
+		switch (key) {
+			case 1:
+				setProductMain(productOne);
+				break;
+			case 2:
+				setProductMain(productTwo);
+				break;
+			case 3:
+				setProductMain(productThree);
+				break;
+			case 4:
+				setProductMain(productFour);
+				break;
+			default:
+				setProductMain(productOne);
+				break;
+		}
+	};
 	return (
 		<div className={style.product}>
 			<div className={style.product_image}>
-				<img src={productOne} alt="a pair of shoes on display" />
+				<img src={productMain} alt="a pair of shoes on display" />
 				<ul className={style.product_image_list}>
-					<li>
-						<img src={productOne} alt="a pair of shoes" />
+					<li onClick={() => switchImage(1)}>
+						<img src={productOneThumbnail} alt="a pair of shoes" />
 					</li>
-					<li>
-						<img src={productTwo} alt="a pair of shoes" />
+					<li onClick={() => switchImage(2)}>
+						<img src={productTwoThumbnail} alt="a pair of shoes" />
 					</li>
-					<li>
-						<img src={productThree} alt="a pair of shoes" />
+					<li onClick={() => switchImage(3)}>
+						<img src={productThreeThumbnail} alt="a pair of shoes" />
 					</li>
-					<li>
-						<img src={productFour} alt="a pair of shoes" />
+					<li onClick={() => switchImage(4)}>
+						<img src={productFourThumbnail} alt="a pair of shoes" />
 					</li>
 				</ul>
 			</div>

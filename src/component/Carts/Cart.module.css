@@ -58,3 +58,13 @@
 	color: white;
 	border-radius: 0.75rem;
 }
+
+@media (min-width: 500px) {
+	.cart {
+		width: 350px;
+		left: auto;
+		right: 2rem;
+		top: 5rem;
+		box-shadow: 0 0 20px 0px gray;
+	}
+}
