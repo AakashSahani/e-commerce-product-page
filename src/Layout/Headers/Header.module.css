@@ -38,6 +38,7 @@ header {
 	header {
 		padding: 2rem 0;
 		border-bottom: 1px solid lightgray;
+		width: 100%;
 	}
 	.menu_button {
 		display: none;

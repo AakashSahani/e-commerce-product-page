@@ -47,7 +47,7 @@ function Product({ cartList, setCartList }) {
 				</ul>
 			</div>
 			<div className={style.product_text}>
-				<p>SNEAKER COMPANY</p>
+				<h4>SNEAKER COMPANY</h4>
 				<h3>Fall Limited Edition Sneakers</h3>
 				<p>
 					These low-profile sneakers are your perfect casual wear companion.
@@ -55,8 +55,8 @@ function Product({ cartList, setCartList }) {
 					everything the weather can offer.
 				</p>
 				<div className={style.product_pricing}>
-					<span>$125.00</span>
-					<span>50%</span>
+					<span className={style.price}>$125.00</span>
+					<span className={style.discount}>50%</span>
 					<s>$250.00</s>
 				</div>
 				<div className={style.form_container}>

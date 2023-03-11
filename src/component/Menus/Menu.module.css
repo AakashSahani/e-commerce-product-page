@@ -6,8 +6,8 @@ nav {
 	left: 0;
 	width: 60vw;
 	height: 100vh;
-	background-color: white;
-	color: black;
+	background-color: var(--Lightgrayishblue);
+	color: var(--Grayishblue);
 	padding: 2rem 1.5rem;
 }
 
@@ -24,7 +24,7 @@ nav {
 }
 
 .menu_mobile a {
-	color: black;
+	color: var(--Darkgrayishblue);
 	font-weight: 600;
 }
 
