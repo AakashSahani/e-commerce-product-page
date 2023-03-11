@@ -27,13 +27,13 @@ img {
 	padding: 1rem 5%;
 }
 
-.product_text h4 {
-	color: var(--Orange);
-}
-
 .product_text h3 {
 	font-weight: bold;
 	font-size: 2rem;
+}
+
+.product_text h4 {
+	color: var(--Orange);
 }
 
 .product_text p {

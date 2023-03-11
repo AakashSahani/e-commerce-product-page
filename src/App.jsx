@@ -7,6 +7,7 @@ import Header from './Layout/Headers/Header';
 function App() {
 	// const [productList, setProductList] = useState(Products);
 	const [cartList, setCartList] = useState([]);
+
 	return (
 		<>
 			<Header cartList={cartList} setCartList={setCartList} />

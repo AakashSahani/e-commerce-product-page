@@ -53,7 +53,7 @@ function Product({ cartList, setCartList }) {
 		}
 	};
 	return (
-		<div className={style.product}>
+		<section className={style.product}>
 			<div className={style.product_image}>
 				<img src={productMain} alt="a pair of shoes on display" />
 				<ul className={style.product_image_list}>
@@ -72,8 +72,8 @@ function Product({ cartList, setCartList }) {
 				</ul>
 			</div>
 			<div className={style.product_text}>
-				<h4>SNEAKER COMPANY</h4>
 				<h3>Fall Limited Edition Sneakers</h3>
+				<h4>SNEAKER COMPANY</h4>
 				<p>
 					These low-profile sneakers are your perfect casual wear companion.
 					Featuring a durable rubber outer sole, they&apos;ll withstand
@@ -125,7 +125,7 @@ function Product({ cartList, setCartList }) {
 					</button>
 				</div>
 			</div>
-		</div>
+		</section>
 	);
 }
 
