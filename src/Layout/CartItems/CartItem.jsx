@@ -7,7 +7,6 @@ function CartItem({ cartItem, setCartList, cartList }) {
 	const handleClick = () => {
 		const cartIndex = cartList.findIndex((item) => item.id === cartItem.id);
 		const newCartList = cartList.filter((list, index) => index != cartIndex);
-		console.log(newCartList);
 		setCartList(newCartList);
 	};
 
@@ -17,8 +16,8 @@ function CartItem({ cartItem, setCartList, cartList }) {
 			<div>
 				<p>{cartItem.name}</p>
 				<p>
-					${cartItem.price} x {cartItem.quantity} $
-					{cartItem.price * cartItem.quantity}
+					${cartItem.price} x {cartItem.quantity}
+					<strong> ${cartItem.price * cartItem.quantity}</strong>
 				</p>
 			</div>
 			<button type="submit" onClick={handleClick}>

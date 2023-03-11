@@ -34,6 +34,9 @@ function Header({ cartList, setCartList }) {
 			</div>
 			<div className={style.container}>
 				<button type="submit" onClick={() => setActive((active) => !active)}>
+					{cartList.length > 0 && (
+						<span className={style.count}>{cartList[0].quantity}</span>
+					)}
 					<img src={cartIcon} alt="Shopping Cart Button" />
 				</button>
 				<button type="submit" className={style.profile}>

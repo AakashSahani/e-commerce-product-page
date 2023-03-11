@@ -21,9 +21,11 @@ function Cart({ cartList, setCartList }) {
 					))
 				)}
 			</ul>
-			<button type="submit" className={style.checkout_button}>
-				Checkout
-			</button>
+			{cartList.length > 0 && (
+				<button type="submit" className={style.checkout_button}>
+					Checkout
+				</button>
+			)}
 		</div>
 	);
 }

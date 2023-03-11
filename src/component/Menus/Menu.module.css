@@ -32,10 +32,16 @@ nav {
 	nav {
 		position: relative;
 		display: flex;
+		justify-content: center;
+		align-items: center;
 		width: fit-content;
 		height: fit-content;
 		padding: 0 2rem;
 		flex: 1;
+		/* height: 100%; */
+	}
+	nav ul {
+		padding: 0;
 	}
 	.menu_mobile {
 		display: flex;
@@ -46,5 +52,18 @@ nav {
 		width: inherit;
 		margin: 0;
 		gap: 2rem;
+	}
+	.menu_mobile li {
+		border: 0.25rem solid transparent;
+		padding: 2rem 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	li a {
+		padding: 0;
+	}
+	.menu_mobile li:hover {
+		border-bottom: 0.25rem solid var(--Orange);
 	}
 }
