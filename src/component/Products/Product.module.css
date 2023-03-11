@@ -62,7 +62,7 @@ input {
 .cart_button {
 	width: 100%;
 	margin: 0 auto;
-	background-color: orangered;
+	background-color: var(--Orange);
 	padding: 1.2rem 0;
 	color: white;
 	border-radius: 0.75rem;
@@ -105,7 +105,7 @@ form input {
 
 form button {
 	font-size: 1.2rem;
-	color: orangered;
+	color: var(--Orange);
 	font-weight: 600;
 }
 

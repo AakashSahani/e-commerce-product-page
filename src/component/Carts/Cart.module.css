@@ -39,7 +39,7 @@
 .checkout_button {
 	width: 90%;
 	margin: 1rem auto;
-	background-color: orangered;
+	background-color: var(--Orange);
 	padding: 1rem;
 	color: white;
 	border-radius: 0.75rem;

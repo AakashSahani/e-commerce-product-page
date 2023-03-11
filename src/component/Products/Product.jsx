@@ -23,13 +23,14 @@ function Product({ cartList, setCartList }) {
 			productImgUrl: '/src/assets/images/image-product-1-thumbnail.webp',
 		};
 		const index = cartList.findIndex((cart) => cart.name === product1.name);
-		const newList = quantity > 0 && [...cartList];
-
-		if (index > -1) {
-			newList[index] = product1;
-			setCartList((cartList) => newList);
-		} else {
-			setCartList((cartList) => [...cartList, product1]);
+		const newList = [...cartList];
+		if (product1.quantity > 0) {
+			if (index > -1) {
+				newList[index] = product1;
+				setCartList((cartList) => newList);
+			} else {
+				setCartList((cartList) => [...cartList, product1]);
+			}
 		}
 	};
 	const switchImage = (key) => {

@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import style from './Cart.module.css';
-import CartItem from '../../Layout/CartItems/CartItem';
+import CartItem from '../CartItems/CartItem';
 
 function Cart({ cartList, setCartList }) {
 	return (
