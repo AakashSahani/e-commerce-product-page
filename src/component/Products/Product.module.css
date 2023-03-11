@@ -6,7 +6,7 @@
 	justify-content: center;
 }
 
-.product_image ul {
+.product_image {
 	display: none;
 	list-style: none;
 }
@@ -137,9 +137,6 @@ form button {
 	color: gray;
 }
 
-@media (min-width: 700px) {
-}
-
 @media (min-width: 925px) {
 	.product {
 		flex-flow: row;
@@ -152,6 +149,10 @@ form button {
 	}
 	.product_image {
 		flex: 1;
+		display: block;
+	}
+	.product_hide {
+		display: none;
 	}
 	.product_image img {
 		border-radius: 1rem;

@@ -10,10 +10,12 @@ import productOneThumbnail from '../../assets/images/image-product-1-thumbnail.w
 import productTwoThumbnail from '../../assets/images/image-product-2-thumbnail.webp';
 import productThreeThumbnail from '../../assets/images/image-product-3-thumbnail.webp';
 import productFourThumbnail from '../../assets/images/image-product-4-thumbnail.webp';
+import ProductImage from '../ProductImage/ProductImage';
 
 function Product({ cartList, setCartList }) {
 	const [quantity, setQuantity] = useState(0);
 	const [productMain, setProductMain] = useState(productOne);
+	const [imageView, setImageView] = useState(false);
 	const handleSubmit = () => {
 		const product1 = {
 			id: uuidv4(),
@@ -55,7 +57,11 @@ function Product({ cartList, setCartList }) {
 	return (
 		<section className={style.product}>
 			<div className={style.product_image}>
-				<img src={productMain} alt="a pair of shoes on display" />
+				<img
+					src={productMain}
+					alt="a pair of shoes on display"
+					onClick={() => setImageView(!imageView)}
+				/>
 				<ul className={style.product_image_list}>
 					<li onClick={() => switchImage(1)}>
 						<img src={productOneThumbnail} alt="a pair of shoes" />
@@ -71,6 +77,12 @@ function Product({ cartList, setCartList }) {
 					</li>
 				</ul>
 			</div>
+			<div className={style.product_hide}>
+				<ProductImage />
+			</div>
+			{imageView && (
+				<ProductImage imageView={imageView} setImageView={setImageView} />
+			)}
 			<div className={style.product_text}>
 				<h3>Fall Limited Edition Sneakers</h3>
 				<h4>SNEAKER COMPANY</h4>

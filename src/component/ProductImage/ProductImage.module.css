@@ -1,0 +1,147 @@
+.image {
+	position: relative;
+	display: flex;
+	/* width: fit-c
+	ontent; */
+	width: 100vw;
+	height: fit-content;
+	background-color: transparent;
+	flex-direction: row;
+}
+
+.close {
+	display: none;
+}
+
+.image_list {
+	display: none;
+}
+
+.image_container {
+	position: relative;
+	height: 50%;
+	width: 100vw;
+	display: flex;
+	flex-flow: row;
+	justify-content: center;
+	align-items: center;
+	margin: 1rem 0;
+}
+
+.image_container > button {
+	position: absolute;
+	background-color: white;
+	height: 3rem;
+	width: 3rem;
+	border-radius: 1.5rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 1.2rem;
+	font-weight: 700;
+}
+
+.image_container button:hover {
+	color: var(--Orange);
+}
+.image_container > button:first-child {
+	/* transform: translateX(100%); */
+	left: 1.5rem;
+}
+.image_container > button:last-child {
+	/* transform: translateX(-100%); */
+	right: 1.5rem;
+}
+
+img {
+	object-fit: contain;
+	width: 100%;
+	height: auto;
+}
+
+@media (min-width: 925px) {
+	.image {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100vw;
+		height: 100vh;
+		background-color: var(--LightBox);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-flow: column;
+	}
+
+	.close {
+		width: 400px;
+		margin: 0 auto;
+		padding: 0 1rem;
+		display: flex;
+	}
+
+	.close button {
+		color: var(--Orange);
+		/* font-size: 1.2rem; */
+		margin-left: auto;
+	}
+
+	.image_container {
+		max-height: 50%;
+		height: fit-content;
+		width: 450px;
+		display: flex;
+		flex-flow: row;
+		justify-content: center;
+		align-items: center;
+		margin: 1rem 0;
+	}
+
+	.image_container > button {
+		position: relative;
+		background-color: white;
+		height: 2.5rem;
+		width: 3rem;
+		border-radius: 1.5rem;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-size: 1.2rem;
+		font-weight: 700;
+	}
+
+	.image_container button:hover {
+		color: var(--Orange);
+	}
+	.image_container > button:first-child {
+		transform: translateX(50%);
+		left: 0;
+	}
+	.image_container > button:last-child {
+		transform: translateX(-50%);
+		right: 0;
+	}
+
+	img {
+		object-fit: contain;
+		width: 100%;
+		height: auto;
+		border-radius: 0.75rem;
+	}
+	img {
+		border-radius: 1rem;
+		object-fit: contain;
+	}
+	.image_list {
+		display: flex;
+		flex-flow: row;
+		margin: 1rem;
+		justify-content: space-between;
+		gap: 0.5rem;
+		padding: 0 1rem;
+	}
+
+	ul li {
+		width: 5rem;
+	}
+}
