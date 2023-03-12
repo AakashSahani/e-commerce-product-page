@@ -9,14 +9,15 @@ import productOneThumbnail from '/src/assets/images/image-product-1-thumbnail.we
 import productTwoThumbnail from '/src/assets/images/image-product-2-thumbnail.webp';
 import productThreeThumbnail from '/src/assets/images/image-product-3-thumbnail.webp';
 import productFourThumbnail from '/src/assets/images/image-product-4-thumbnail.webp';
-import iconClose from '/src/assets/images/icon-close.svg';
 function ProductImage({ setImageView }) {
 	const [lightBoxImage, setLightBoxImage] = useState(productOne);
 	const [imgPos, setImgPos] = useState(1);
 	const switchImage = (key) => {
 		const listitem = document.querySelectorAll('li.active');
 		listitem.forEach((li) => li.classList.remove('active'));
-		document.getElementById(`list${key}`).classList.add('active');
+		(key > 0) & (key < 5) &&
+			document.getElementById(`list${key}`).classList.add('active');
+
 		switch (key) {
 			case 0:
 				setLightBoxImage(productFour);
@@ -48,7 +49,13 @@ function ProductImage({ setImageView }) {
 		<section className={style.image}>
 			<div className={style.close}>
 				<button type="submit" onClick={() => setImageView(false)}>
-					<img src={iconClose} alt="Close image" />
+					<svg width="14" height="15" xmlns="http://www.w3.org/2000/svg">
+						<path
+							d="m11.596.782 2.122 2.122L9.12 7.499l4.597 4.597-2.122 2.122L7 9.62l-4.595 4.597-2.122-2.122L4.878 7.5.282 2.904 2.404.782l4.595 4.596L11.596.782Z"
+							fill="#69707D"
+							fillRule="evenodd"
+						/>
+					</svg>
 				</button>
 			</div>
 			<div className={style.image_container}>

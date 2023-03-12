@@ -54,6 +54,15 @@
 	font-weight: 700;
 }
 
+.image button:hover {
+	color: var(--Orange);
+	opacity: 1;
+}
+.image svg path:hover {
+	fill: var(--Orange);
+	/* color: var(--Orange); */
+}
+
 .image_container button:hover {
 	color: var(--Orange);
 }
