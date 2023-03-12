@@ -32,7 +32,7 @@ Users should be able to:
 ### Screenshot
 
 ![Desktop Screenshot](./src/assets/screenshots/desktopScreenshot.webp)
-![Mobile Screenshot](./src/assets/screenshots/mobileScreenshot.webp.webp)
+![Mobile Screenshot](./src/assets/screenshots/mobileScreenshot.webp)
 
 ### Links
 
