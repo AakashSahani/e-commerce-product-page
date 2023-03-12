@@ -17,20 +17,21 @@ img {
 	object-fit: contain;
 }
 
-.product_image li {
+/* .product_image li {
 	border-radius: 1.25rem;
 	border: 2px solid transparent;
+} */
+.active {
+	border: 2px solid var(--Orange);
+	opacity: 0.75;
+	border-radius: 1.25rem;
 }
 
 .product_image li:hover,
 .product_image li:focus {
 	opacity: 0.75;
 }
-.product_image li:active {
-	border: 2px solid var(--Orange);
-	border-radius: 1.25rem;
-	opacity: 0.75;
-}
+
 .product_text {
 	display: flex;
 	flex-flow: column;

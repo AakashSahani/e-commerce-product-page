@@ -14,6 +14,9 @@ function ProductImage({ setImageView }) {
 	const [lightBoxImage, setLightBoxImage] = useState(productOne);
 	const [imgPos, setImgPos] = useState(1);
 	const switchImage = (key) => {
+		const listitem = document.querySelectorAll('li.active');
+		listitem.forEach((li) => li.classList.remove('active'));
+		document.getElementById(`list${key}`).classList.add('active');
 		switch (key) {
 			case 0:
 				setLightBoxImage(productFour);
@@ -58,16 +61,16 @@ function ProductImage({ setImageView }) {
 				</button>
 			</div>
 			<ul className={style.image_list}>
-				<li onClick={() => switchImage(1)}>
+				<li id="list1" onClick={() => switchImage(1)} className="active">
 					<img src={productOneThumbnail} alt="a pair of shoes" />
 				</li>
-				<li onClick={() => switchImage(2)}>
+				<li id="list2" onClick={() => switchImage(2)}>
 					<img src={productTwoThumbnail} alt="a pair of shoes" />
 				</li>
-				<li onClick={() => switchImage(3)}>
+				<li id="list3" onClick={() => switchImage(3)}>
 					<img src={productThreeThumbnail} alt="a pair of shoes" />
 				</li>
-				<li onClick={() => switchImage(4)}>
+				<li id="list4" onClick={() => switchImage(4)}>
 					<img src={productFourThumbnail} alt="a pair of shoes" />
 				</li>
 			</ul>
