@@ -9,11 +9,13 @@ function CartItem({ cartItem, setCartList, cartList }) {
 		const newCartList = cartList.filter((list, index) => index != cartIndex);
 		setCartList(newCartList);
 	};
-
+	const handleImgPath = (name) => {
+		return new URL(`../../assets/images/${name}.webp`, import.meta.url).href;
+	};
 	return (
 		<li className={style.cart_item}>
 			<img
-				src={`${new URL(cartItem.productImgUrl, import.meta.url).href}`}
+				src={`${handleImgPath(cartItem.productImgName)}`}
 				alt="Sneaker shoes"
 			/>
 			<div>

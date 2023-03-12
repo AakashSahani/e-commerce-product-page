@@ -22,7 +22,7 @@ function Product({ cartList, setCartList }) {
 			name: 'Fall Limited Edition Sneakers',
 			price: 125,
 			quantity: quantity,
-			productImgUrl: '../../assets/images/image-product-1-thumbnail.webp',
+			productImgName: 'image-product-1-thumbnail',
 		};
 		const index = cartList.findIndex((cart) => cart.name === product1.name);
 		const newList = [...cartList];
