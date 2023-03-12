@@ -5,7 +5,7 @@ header {
 	flex-flow: row;
 	width: 100%;
 	padding: 0.75rem 1.5rem;
-	z-index: 0;
+	z-index: 10;
 }
 
 .container {
@@ -36,7 +36,7 @@ header {
 }
 
 .count {
-	position: fixed;
+	position: absolute;
 	transform: translateY(-50%);
 	background-color: var(--Orange);
 	color: white;
@@ -68,7 +68,9 @@ header {
 	.container {
 		/* gap: 2rem; */
 		height: 100%;
+		z-index: 0;
 	}
+
 	.profile:hover {
 		border: 0.15rem solid var(--Orange);
 		border-radius: 50%;

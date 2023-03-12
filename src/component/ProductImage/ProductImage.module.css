@@ -9,6 +9,19 @@
 	flex-direction: row;
 }
 
+.image_list li {
+	border-radius: 1.25rem;
+	border: 2px solid transparent;
+}
+
+.image_list li:hover,
+.image_list li:focus,
+.image_list li:active {
+	border: 2px solid var(--Orange);
+	border-radius: 1.25rem;
+	opacity: 0.75;
+}
+
 .close {
 	display: none;
 }
@@ -73,6 +86,9 @@ img {
 		flex-flow: column;
 	}
 
+	.image img {
+		border-radius: 1rem;
+	}
 	.close {
 		width: 400px;
 		margin: 0 auto;

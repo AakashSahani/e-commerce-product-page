@@ -10,6 +10,7 @@
 	border-radius: 0.5rem;
 	min-height: 250px;
 	box-shadow: 0 0 20px 0px gray;
+	z-index: 99;
 }
 
 .cart > * {
@@ -26,6 +27,7 @@
 	gap: 1rem;
 	height: 100%;
 	margin: auto;
+	width: 100%;
 }
 
 .empty {
@@ -43,6 +45,11 @@
 	padding: 1rem;
 	color: white;
 	border-radius: 0.75rem;
+}
+
+.checkout_button:hover {
+	opacity: 0.75;
+	cursor: pointer;
 }
 
 @media (min-width: 400px) {

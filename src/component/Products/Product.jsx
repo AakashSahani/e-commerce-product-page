@@ -84,16 +84,18 @@ function Product({ cartList, setCartList }) {
 				<ProductImage imageView={imageView} setImageView={setImageView} />
 			)}
 			<div className={style.product_text}>
-				<h3>Fall Limited Edition Sneakers</h3>
-				<h4>SNEAKER COMPANY</h4>
+				<h3>SNEAKER COMPANY</h3>
+				<h4>Fall Limited Edition Sneakers</h4>
 				<p>
 					These low-profile sneakers are your perfect casual wear companion.
 					Featuring a durable rubber outer sole, they&apos;ll withstand
 					everything the weather can offer.
 				</p>
 				<div className={style.product_pricing}>
-					<span className={style.price}>$125.00</span>
-					<span className={style.discount}>50%</span>
+					<div>
+						<span className={style.price}>$125.00</span>
+						<span className={style.discount}>50%</span>
+					</div>
 					<s>$250.00</s>
 				</div>
 				<div className={style.form_container}>
