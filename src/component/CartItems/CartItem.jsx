@@ -12,7 +12,10 @@ function CartItem({ cartItem, setCartList, cartList }) {
 
 	return (
 		<li className={style.cart_item}>
-			<img src={`${cartItem.productImgUrl}`} alt="Sneaker shoes" />
+			<img
+				src={`${new URL(cartItem.productImgUrl, import.meta.url).href}`}
+				alt="Sneaker shoes"
+			/>
 			<div>
 				<p>{cartItem.name}</p>
 				<p>
